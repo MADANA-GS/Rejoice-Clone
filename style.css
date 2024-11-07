@@ -1,0 +1,386 @@
+@font-face {
+  font-family: nb;
+  src: url(fonts/NBInternationalProBoo.woff2);
+}
+@font-face {
+  font-family: rj;
+  src: url(fonts/Rejouice-Headline.woff2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: nb;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.cursor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: fixed;
+  height: 7.5vw;
+  width: 7.5vw;
+  border-radius: 50%;
+  background-color: #09090982;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  transition: all ease 0.2s;
+}
+.cursor h5 {
+  font-size: 1.2vw;
+  font-weight: 100;
+}
+
+.page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: #dadada;
+  position: relative;
+}
+.page1 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+.page1-content {
+  z-index: 12;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  color: #fff;
+}
+nav {
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.8vw 2.9vw;
+}
+nav h3 {
+  font-size: 1.4vw;
+  font-weight: 100;
+}
+nav h4 {
+  font-size: 1.4vw;
+  font-weight: 100;
+}
+.page1-content h1 {
+  font-family: rj;
+  margin-top: 15vw;
+  font-size: 27vw;
+  line-height: 27vw;
+  font-weight: 550;
+}
+.page1-content h1 span {
+  font-family: rj;
+  display: inline-block;
+}
+.page2 {
+  position: relative;
+  z-index: 15;
+  padding: 4vw;
+  height: 100vh;
+  width: 100%;
+}
+.page2-top {
+  margin-top: 5vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 1.2vw;
+  margin-bottom: 1vw;
+  position: relative; /* To position the pseudo-element */
+}
+
+.border-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #00000092;
+  transform: scaleX(0); /* Start with invisible border */
+  transform-origin: left; /* Animation will start from the left side */
+}
+
+.page2-top h3 {
+  font-size: 1.7vw;
+  font-weight: 500;
+  /* width: 26%; */
+}
+.page2-top h4 {
+  font-size: 1.7vw;
+  font-weight: 500;
+}
+.elem {
+  padding: 1vw;
+  overflow: hidden;
+}
+
+.elem h1 {
+  font-size: 4.2vw;
+  font-weight: 500;
+}
+.page3 {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 4vw;
+}
+.page3-top {
+  text-align: center;
+}
+.page3-top h4 {
+  margin-bottom: 1vw;
+  font-size: 1vw;
+  font-weight: 500;
+}
+.page3-top h4 {
+  margin-top: 9vw;
+  margin-bottom: 1vw;
+  font-size: 1vw;
+  font-weight: 500;
+}
+.page3-top h4 span {
+  color: #fff;
+  padding: 0.5vw 0.7vw;
+  background-color: #0e0e0e;
+  border-radius: 1vw;
+  font-size: 0.8vw;
+  font-weight: 500;
+}
+.page3-top h4 span:hover {
+  border: 0.1vw solid maroon;
+}
+.page3-top h2 {
+  font-size: 4vw;
+  font-weight: 550;
+}
+.page3-elements {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr; /* Create 3 equal columns */
+  align-items: center; /* Center items vertically within the grid */
+  justify-items: center; /* Center items horizontally within the grid */
+  gap: 1.5vw;
+}
+
+.page3-ele-hed {
+  margin-bottom: 1vw;
+  margin-top: 15vw;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.page3-ele-hed h3 {
+  font-size: 1.7vw;
+  font-weight: 500;
+}
+
+.page3-ele-hed h4 {
+  font-size: 1.7vw;
+  font-weight: 500;
+}
+.box {
+  height: 100%;
+  width: 95%;
+  position: relative;
+}
+.box img {
+  z-index: 25;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  transition: all ease 0.2s;
+}
+
+.box video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+}
+.page4 {
+  width: 100%;
+  margin-top: 9vw;
+  min-height: 70vh;
+}
+.page4-top {
+  position: relative;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  padding-left: 4vw;
+}
+.page4-top span h3 {
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+.border-line2 {
+  position: absolute;
+  margin-top: 5vw;
+  bottom: 0;
+  top: 0vw;
+  left: 4vw;
+  width: 100%;
+  height: 1px;
+  background-color: #00000092;
+  transform: scaleX(0); /* Start with invisible border */
+  transform-origin: left; /* Animation will start from the left side */
+}
+.elem2 {
+  margin-left: 3vw;
+  padding: 1vw;
+  overflow: hidden;
+}
+
+.elem2 h1 {
+  font-size: 4.2vw;
+  font-weight: 500;
+}
+.anime {
+  overflow: hidden;
+  margin-top: 3vw;
+  text-align: center;
+  align-items: center;
+  position: relative;
+}
+.anime video {
+  width: 67vw;
+}
+.cursor2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: absolute;
+  height: 7.5vw;
+  width: 7.5vw;
+  border-radius: 50%;
+  background-color: #09090982;
+  transform: translate(-50%, -50%);
+  z-index: 40;
+}
+.cursor2 h5 {
+  font-size: 1.2vw;
+  font-weight: 100;
+}
+
+.animeCircle {
+  left: 32vw;
+  top: 15vw;
+  height: 35vw;
+  width: 35vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+}
+.animeCircle h3 {
+  color: #fff;
+  font-size: 3.5vw;
+}
+.animeCircle h4 {
+  color: #fff;
+  font-size: 1.5vw;
+  font-weight: 200;
+}
+.animeDot {
+  left: 36vw;
+  top: 43.8vw;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+}
+.page5 {
+  width: 100%;
+  height: 100vh;
+  padding: 4vw 0;
+  position: relative;
+}
+.page5-top {
+  padding: 0 4vw;
+}
+
+.page5-top h1 {
+  font-size: 10vw;
+  font-family: rj;
+  font-weight: 100;
+  border-bottom: 1px solid #0c0b0b;
+}
+.swipper {
+  z-index: 5555;
+  height: 60vh;
+  width: 100%;
+  /* background-color: red; */
+  position: relative;
+  margin-top: -2%;
+}
+.swiper {
+  width: 120%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: 400px;
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  gap: 2vw;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 35%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+.loader
+{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #0E0E0E;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  gap: 10px;
+  justify-content: center;
+}
+.loader h3
+{
+  font-size: 2vw;
+}
